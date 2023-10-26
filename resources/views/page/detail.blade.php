@@ -16,7 +16,7 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="user/images/product-details/1.jpg" alt="" />
+								<img src="user/images/home/i912900k.jpg" alt="" />
 								{{-- <h3>ZOOM</h3> --}}
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
@@ -24,19 +24,19 @@
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
 										<div class="item active">
-										  <a href=""><img src="user/images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="user/images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="user/images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="user/images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="user/images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="user/images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="user/images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="user/images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="user/images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
+										  <a href=""><img src="user/images/home/i912900k.jpg" width="80" height="80" alt=""></a>
 										</div>
 										
 									</div>
@@ -51,30 +51,33 @@
 							</div>
 
 						</div>
+						
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="user/images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-								<p>Web ID: 1089772</p>
+								<h2>Bộ xử lý Intel® Core™ i9 thế hệ thứ 12 </h2>
+								<p>Web ID: 12900</p>
 								<img src="user/images/product-details/rating.png" alt="" />
 								<span>
-									<span>US $59</span>
-									<label>Quantity:</label>
-									<input type="text" value="3" />
+									<span>Giá 59$</span>
+									<label>Số lượng:</label>
+									<input type="text" value="1" />
 									<button type="button" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
 									</button>
 								</span>
-								<p><b>Availability:</b> In Stock</p>
-								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> E-SHOPPER</p>
-								<a href=""><img src="user/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+								<p><b>Tình trạng kho:</b> Còn hàng</p>
+								<p><b>Tình trạng:</b> New</p>
+								<p><b>Brand:</b> Intel</p>
+								<p>Mô tả:</b> Intel Core i9 12900K hiệu năng mạnh mẽ giúp xử lý công việc vượt trội. Được tạo nên từ kiến trúc Alder Lake-S đi cùng socket 1700 phù hợp với những mainboard Z690 mới nhất hiện nay, Intel Core i9-12900K sẽ là thành phần cho những bộ siêu PC Gaming trong tương lai. Sở hữu 16 nhân 24 luồng, xung nhịp mặc định ở mức 3.2GHz có thể tăng lên đến 5.2GHz và công nghệ phân luồng Hyper-Threading, i9-12900K đem lại hiệu quả xử lý vượt trội cho dù, từ nhẹ đến nặng như render, AI,...</p>
+								{{-- <a href=""><img src="user/images/product-details/share.png" class="share img-responsive"  alt="" /></a> --}}
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
 					
-					<div class="category-tab shop-details-tab"><!--category-tab-->
+					{{-- ĐÁNH GIÁ CỦA KHÁCH HÀNG
+						 <div class="category-tab shop-details-tab"><!--category-tab-->
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								<li><a href="#details" data-toggle="tab">Details</a></li>
@@ -262,10 +265,10 @@
 							</div>
 							
 						</div>
-					</div><!--/category-tab-->
+					</div><!--/category-tab--> --}} 
 					
 					<div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">recommended items</h2>
+						<h2 class="title text-center">Sản phẩm liên quan</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
@@ -274,11 +277,12 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="user/images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+													<img src="user/images/home/gtx1660supermini.jpg" alt="" />
+													<h2>$30</h2>
+													<p>GTX 1600 Super Mini</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -286,61 +290,69 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="user/images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
+													<img src="user/images/home/gtx1660supermini.jpg" alt="" />
+													<h2>$30</h2>
+													<p>GTX 1600 Super Mini</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>                              
 											</div>
 										</div>
 									</div>
+									
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="user/images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+													<img src="user/images/home/gtx1660supermini.jpg" alt="" />
+													<h2>$30</h2>
+													<p>GTX 1600 Super Mini</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
+												
 											</div>
 										</div>
 									</div>
 								</div>
+				
 								<div class="item">	
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="user/images/home/recommend1.jpg" alt="" />
+													<img src="user/images/home/gtx1660supermini.jpg" alt="" />
 													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+													<p>GTX 1600 Super Mini</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
+												
 											</div>
 										</div>
 									</div>
+				
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="user/images/home/recommend2.jpg" alt="" />
+													<img src="user/images/home/gtx1660supermini.jpg" alt="" />
 													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+													<p>GTX 1600 Super Mini</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
+												
 											</div>
 										</div>
 									</div>
+				
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src="user/images/home/recommend3.jpg" alt="" />
+													<img src="user/images/home/gtx1660supermini.jpg" alt="" />
 													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+													<p>GTX 1600 Super Mini</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -353,7 +365,7 @@
 								<i class="fa fa-angle-right"></i>
 							  </a>			
 						</div>
-					</div><!--/recommended_items-->
+					</div>
 					
 				</div>
 			</div>

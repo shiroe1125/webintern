@@ -13,7 +13,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="user/images/home/iframe1.png" alt="" />
+                                    <img src="user/images/home/room1.jpg" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -28,7 +28,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="user/images/home/iframe2.png" alt="" />
+                                    <img src="user/images/home/room1.jpg" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -43,7 +43,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="user/images/home/iframe3.png" alt="" />
+                                    <img src="user/images/home/room1.jpg" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -58,7 +58,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="user/images/home/iframe4.png" alt="" />
+                                    <img src="user/images/home/room1.jpg" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>Shop</h2>
+                        <h2>Store</h2>
                         <ul class="nav nav-pills nav-stacked">
                             <li><a href="#">CPU</a></li>
                             <li><a href="#">Mainboard</a></li>
