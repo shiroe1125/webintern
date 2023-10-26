@@ -12,39 +12,40 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free E-Commerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h1><span>E</span>-Orange</h1>
+                                <h2>Good choice for everyone</h2>
+                                <p>Hãy để E-Orange chúng tôi giúp bạn có từ bước đầu sở hữu 1 bộ máy tính cho riêng mình.</p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="user/images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                <img src="user/images/home/pricing.png"  class="pricing" alt="" />
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>100% Responsive Design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="user/images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                <img src="user/images/home/pricing.png"  class="pricing" alt="" />
+                                <img src="user/images/home/room1.jpg" class="girl img-responsive" alt="" />
+                                {{-- <img src="user/images/home/pricing.png"  class="pricing" alt="" /> --}}
                             </div>
                         </div>
                         
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free Ecommerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h1><span>E</span>-Orange</h1>
+                                <h2>Good choice for everyone</h2>
+                                <p>E-Orange sẽ giúp bạn xây dựng nên một góc Gaming phù hợp nhất cho bản thân mình.</p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="user/images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                <img src="user/images/home/pricing.png" class="pricing" alt="" />
+                                <img src="user/images/home/room2.jpg" class="girl img-responsive" alt="" />
+                                {{-- <img src="user/images/home/pricing.png"  class="pricing" alt="" /> --}}
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1><span>E</span>-Orange</h1>
+                                <h2>Good choice for everyone</h2>
+                                <p> E-Orange sẽ giúp bạn trên con đường xây dựng bộ máy tính cho riêng mình.</p>
+                                <button type="button" class="btn btn-default get">Get it now</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="user/images/home/room3.jpg" class="girl img-responsive" alt="" />
+                                {{-- <img src="user/images/home/pricing.png" class="pricing" alt="" /> --}}
                             </div>
                         </div>
                         

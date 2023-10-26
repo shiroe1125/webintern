@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | Bamboo Store</title>
+    <title>E-Orange Store</title>
     <base href="{{env('APP_URL')}}">
     <link href="user/css/bootstrap.min.css" rel="stylesheet">
     <link href="usercss/font-awesome.min.css" rel="stylesheet">
