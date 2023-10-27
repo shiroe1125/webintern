@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\admin\home;
+use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +26,13 @@ Route::post('/login',[LoginController::class, 'store'])->name('login');
 Route::get('/detail', function () {
     return view('page.detail');
 })->name('detail');
+
+Route::get('/admin/products', [ProductController::class, 'index']) ->name('admin.products');
+
+Route::get('admin', function () {
+    return view('admin.admin_home');
+}) ->name('admin');
+
+Route::get('/admin/home', [home::class, 'index']) ->name('admin.home');
+
+Route::get('/admin/products', [ProductController::class, 'index']) ->name('admin.products');
