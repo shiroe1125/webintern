@@ -24,14 +24,16 @@
             <span class="hide-menu">Dashboard</span>
           </a>
         </li>
+
         <li class="sidebar-item">
-          <a class="sidebar-link" href="./index.html" aria-expanded="false">
+          <a class="sidebar-link" href="{{route ('admin.category')}}" aria-expanded="false">
             <span>
               <i class="ti ti-layout-dashboard"></i>
             </span>
             <span class="hide-menu">Danh mục</span>
           </a>
         </li>
+
         <li class="sidebar-item">
           <a class="sidebar-link" href="{{ route('admin.products') }}" aria-expanded="false">
             <span>
@@ -40,6 +42,7 @@
             <span class="hide-menu">Sản phẩm</span>
           </a>
         </li>
+
         <li class="sidebar-item">
           <a class="sidebar-link" href="./index.html" aria-expanded="false">
             <span>
@@ -48,6 +51,7 @@
             <span class="hide-menu">Đơn hàng</span>
           </a>
         </li>
+        
         <li class="sidebar-item">
           <a class="sidebar-link" href="./index.html" aria-expanded="false">
             <span>
