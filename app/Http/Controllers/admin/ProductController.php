@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Product;
 class ProductController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class ProductController extends Controller
     public function index()
     {
         $template = "admin.product.index";
-        return view('admin.admin_home', compact('template'));
+        $product = Product::all();
+        return view('admin.admin_home', compact('template','product'));
     }
 
     /**
@@ -21,7 +22,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.product.add');
     }
 
     /**
@@ -29,7 +30,26 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $storagePath = public_path('uploads');
+        echo $storagePath;
+        if ($request->hasFile('image')) {
+            $avatar = $request->file('image');
+            $fileName = time() . '.' . $avatar->getClientOriginalExtension();
+            $avatar->move(public_path('uploads'), $fileName);
+        } else {
+            $fileName = null; // Đảm bảo biến $fileName được định nghĩa dù có tải lên tệp ảnh hay không
+        }
+
+        $product = new Product();
+        $product->name = $request->input('name');
+        $product->price = $request->input('price');
+        $product->quanity = $request->input('quantity');
+        $product->description = $request->input('description');
+        $product->image = $fileName;
+
+        $product->save();
+
+        return redirect()->route('admin.products');
     }
 
     /**
@@ -43,9 +63,11 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(int $id)
     {
-        //
+        $product = Product::find($id);
+        return view('admin.product.edit', compact('product'));
+
     }
 
     /**
@@ -53,14 +75,35 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+        $product = Product::find($id);
+
+        $storagePath = public_path('uploads');
+        echo $storagePath;
+        if ($request->hasFile('image')) {
+            $avatar = $request->file('image');
+            $fileName = time() . '.' . $avatar->getClientOriginalExtension();
+            $avatar->move(public_path('uploads'), $fileName);
+        } else {
+            $fileName = null; // Đảm bảo biến $fileName được định nghĩa dù có tải lên tệp ảnh hay không
+        }
+
+        $product->name = $request->input('name');
+        $product->price = $request->input('price');
+        $product->quanity = $request->input('quantity');
+        $product->description = $request->input('description');
+        $product->image = $fileName;    
+        $product->save();
+        return redirect()->route('admin.products');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
-        //
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('admin.products');
     }
 }

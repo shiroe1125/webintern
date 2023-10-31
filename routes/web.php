@@ -36,3 +36,10 @@ Route::get('admin', function () {
 Route::get('/admin/home', [home::class, 'index']) ->name('admin.home');
 
 Route::get('/admin/products', [ProductController::class, 'index']) ->name('admin.products');
+Route::get('/admin/products/add', [ProductController::class, 'create']) ->name('admin.products.create');
+Route::post('/admin/products/add', [ProductController::class, 'store']) ->name('admin.products.add');
+Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit']) ->name('admin.products.edit');
+Route::put('/admin/products/edit/{id}', [ProductController::class, 'update']) ->name('admin.products.update');
+Route::delete('admin/products/delete/{id}', [ProductController::class, 'destroy']);
+
+Route::get('/admin/category', [ProductController::class, 'index']) ->name('admin.category');
