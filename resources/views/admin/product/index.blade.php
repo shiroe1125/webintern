@@ -1,3 +1,4 @@
+@include('admin.layout.head')
 
     <div class="container-fluid">
         <div class="row">
@@ -39,7 +40,7 @@
                         <form method="POST" action="admin/products/delete/{{$item->id}}">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')">Xóa sản phẩm</button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm không?')">Xóa sản phẩm</button>
                         </form>
                         
 

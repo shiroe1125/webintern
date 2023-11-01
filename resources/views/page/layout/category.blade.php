@@ -181,7 +181,7 @@
        
     </div><!--/category-products-->
 
-
+{{-- 
     <div class="phukien_products"><!--brands_products-->
         <h2>Thương hiệu</h2>
         <div class="brands-name">
@@ -194,15 +194,9 @@
                 <li><a href="#"> <span class="pull-right">(9)</span>AMD</a></li>    
             </ul>
         </div>
-    </div><!--/brands_products-->
+    </div><!--/brands_products--> --}}
     
-    {{-- <div class="price-range"><!--price-range-->
-        <h2>Khoảng giá</h2>
-        <div class="well text-center">
-             <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-             <b class="pull-left">0$</b> <b class="pull-right">100M</b>
-        </div>
-    </div><!--/price-range--> --}}
+
     
     <div class="shipping text-center"><!--shipping-->
         <img src="user/images/home/freeship1.jpg" width="270" height="" alt="" />

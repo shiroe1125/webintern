@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Category;
-
-class CategoryController extends Controller
+use App\Models\Product;
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
+        $product = Product::all();
+        return view('page.home', compact('product'));
     }
 
     /**
@@ -35,9 +35,11 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(int $id)
     {
-        //
+       
+        $detail = Product::find($id);
+        return view('page.detail', compact('detail'));
     }
 
     /**

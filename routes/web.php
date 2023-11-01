@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\home;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\User\HomeController;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,16 +20,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('page.home');
-}) ->name('home');
+Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::get('/login',[LoginController::class, 'index']);
 Route::post('/login',[LoginController::class, 'store'])->name('login');
 
-Route::get('/detail', function () {
-    return view('page.detail');
-})->name('detail');
+Route::get('/detail/{id}',[HomeController::class, 'show'])->name('detail');
+
+
+
 
 Route::get('/admin/products', [ProductController::class, 'index']) ->name('admin.products');
 
@@ -42,4 +45,4 @@ Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit']) ->na
 Route::put('/admin/products/edit/{id}', [ProductController::class, 'update']) ->name('admin.products.update');
 Route::delete('admin/products/delete/{id}', [ProductController::class, 'destroy']);
 
-Route::get('/admin/category', [ProductController::class, 'index']) ->name('admin.category');
+Route::get('/admin/category', [CategoryController::class, 'index']) ->name('admin.category');
