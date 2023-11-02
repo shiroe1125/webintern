@@ -16,27 +16,27 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="{{ asset('uploads/' . $detail->image) }}" alt="" />
-								{{-- <h3>ZOOM</h3> --}}	
+								<img src="{{ asset('uploads/' . $detail->image) }}" alt="" style="width: 350px; height: 350px;" />
+								
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
 										<div class="item active">
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
-										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="80" height="80" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
+										  <a href=""><img src="{{ asset('uploads/' . $detail->image) }}" width="90" height="90" alt=""></a>
 										</div>
 										
 									</div>

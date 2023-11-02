@@ -30,7 +30,7 @@ Route::get('/detail/{id}',[HomeController::class, 'show'])->name('detail');
 
 
 
-Route::get('/admin/products', [ProductController::class, 'index']) ->name('admin.products');
+Route::get('/admin/category', [ProductController::class, 'index']) ->name('admin.products');
 
 Route::get('admin', function () {
     return view('admin.admin_home');
@@ -46,3 +46,8 @@ Route::put('/admin/products/edit/{id}', [ProductController::class, 'update']) ->
 Route::delete('admin/products/delete/{id}', [ProductController::class, 'destroy']);
 
 Route::get('/admin/category', [CategoryController::class, 'index']) ->name('admin.category');
+Route::get('/admin/category/add', [CategoryController::class, 'create']) ->name('admin.category.create');
+Route::post('/admin/category/add', [CategoryController::class, 'store']) ->name('admin.category.add');
+Route::get('/admin/category/edit/{id}', [CategoryController::class, 'edit']) ->name('admin.category.edit');
+Route::put('/admin/category/edit/{id}', [CategoryController::class, 'update']) ->name('admin.category.update');
+Route::delete('admin/category/delete/{id}', [CategoryController::class, 'destroy']);

@@ -3,13 +3,9 @@
     <div class="container-fluid">
         <div class="row">
         <h2>Sản phẩm</h2>
-
-
         <div class="text-right">
         <a class="btn btn-primary" href="{{route("admin.products.create")}}">Thêm sản phẩm</a>
         </div>
-
-
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -33,22 +29,15 @@
                     <td>{{$item->quanity}}</td>
                     <td>
                         
-                        <a href="/admin/products/edit/{{$item->id}}" class="btn btn-primary">Sửa sản phẩm</a>
-
-                       
-                       
+                        <a href="/admin/products/edit/{{$item->id}}" class="btn btn-primary">Sửa sản phẩm</a>               
                         <form method="POST" action="admin/products/delete/{{$item->id}}">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm không?')">Xóa sản phẩm</button>
                         </form>
-                        
-
                     </td>
                 </tr>
-                
-                @endforeach
-                
+                @endforeach     
             </tbody>
         </table>
         </div>

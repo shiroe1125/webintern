@@ -5,19 +5,19 @@
     <form action="{{route('admin.products.add')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="name">Tên</label>
+            <label for="name">Tên sản phẩm</label>
             <input type="text" class="form-control" id="name" name="name"  required>
         </div>
         <div class="form-group">
-            <label for="name">Giá</label>
+            <label for="name">Giá thành</label>
             <input type="text" class="form-control" id="name" name="price" >
         </div>
         <div class="form-group">
-            <label for="name">Số lượng</label>
+            <label for="name">Số lượng trong kho</label>
             <input type="text" class="form-control" id="name" name="quantity" required>
         </div>
         <div class="form-group">
-            <label for="description">Mô tả</label>
+            <label for="description">Mô tả sản phẩm</label>
             <textarea class="form-control" id="description" name="description"  rows="4" required></textarea>
         </div>
         <div class="form-group">
