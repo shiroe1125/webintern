@@ -11,17 +11,6 @@
                     </a>
                 </h4>
             </div>
-            <div id="mainboard" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">Asus </a></li>
-                        <li><a href="#">Gigiabyte </a></li>
-                        <li><a href="#">MSI </a></li>
-                        <li><a href="#">ASRock</a></li>
-                        <li><a href="#">Intel </a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
         <div class="panel panel-default">
@@ -32,20 +21,6 @@
                         Màn hình
                     </a>
                 </h4>
-            </div>
-            <div id="manhinh" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">Asus</a></li>
-                        <li><a href="#">LG</a></li>
-                        <li><a href="#">Samsung</a></li>
-                        <li><a href="#">Dell</a></li>
-                        <li><a href="#">AOC</a></li>
-                        <li><a href="#">Gigabyte</a></li>
-                        <li><a href="#">HKC</a></li>
-                        <li><a href="#">MSI</a></li>               
-                    </ul>
-                </div>
             </div>
         </div>
         
@@ -58,13 +33,6 @@
                     </a>
                 </h4>
             </div>
-            <div id="carddohoa" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">NVIDIA</a></li>
-                        <li><a href="#">AMD</a></li> 
-                </div>
-            </div>
         </div>
 
         <div class="panel panel-default">
@@ -75,13 +43,6 @@
                         CPU
                     </a>
                 </h4>
-            </div>
-            <div id="cpu" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">Intel</a></li>
-                        <li><a href="#">AMD</a></li> 
-                </div>
             </div>
         </div>
             
@@ -94,14 +55,6 @@
                     </a>
                 </h4>
             </div>
-            <div id="ram" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">8GB</a></li>
-                        <li><a href="#">16GB</a></li> 
-                        <li><a href="#">32GB</a></li> 
-                </div>
-            </div>
         </div>
 
         <div class="panel panel-default">
@@ -112,14 +65,6 @@
                         Ổ Cứng
                     </a>
                 </h4>
-            </div>
-            <div id="ocung" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">Ổ cứng SSD</a></li>
-                        <li><a href="#">Ổ cứng HDD</a></li> 
-                        <li><a href="#">Ổ cứng di động</a></li> 
-                </div>
             </div>
         </div>
 
@@ -132,14 +77,6 @@
                     </a>
                 </h4>
             </div>
-            <div id="nguonmaytinh" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">Corsair</a></li>
-                        <li><a href="#">DeepCool</a></li> 
-                        <li><a href="#">Gigabyte</a></li> 
-                </div>
-            </div>
         </div>
 
         <div class="panel panel-default">
@@ -150,13 +87,6 @@
                         Tản nhiệt
                     </a>
                 </h4>
-            </div>
-            <div id="tan nhiet" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a href="#">Tản nhiệt khí</a></li>
-                        <li><a href="#">tản nhiệt nước</a></li> 
-                </div>
             </div>
         </div>
 
