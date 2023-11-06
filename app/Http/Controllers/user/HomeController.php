@@ -14,7 +14,9 @@ class HomeController extends Controller
     {
         $product = Product::all();
         return view('page.home', compact('product'));
-    }
+        
+    
+    }  
 
     /**
      * Show the form for creating a new resource.
@@ -36,8 +38,7 @@ class HomeController extends Controller
      * Display the specified resource.
      */
     public function show(int $id)
-    {
-       
+    {   
         $detail = Product::find($id);
         return view('page.detail', compact('detail'));
     }

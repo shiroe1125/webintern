@@ -21,15 +21,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
-
 Route::get('/login',[LoginController::class, 'index']);
 Route::post('/login',[LoginController::class, 'store'])->name('login');
-
 Route::get('/detail/{id}',[HomeController::class, 'show'])->name('detail');
-
-
-
-
 Route::get('/admin/category', [ProductController::class, 'index']) ->name('admin.products');
 
 Route::get('admin', function () {
