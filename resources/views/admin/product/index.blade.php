@@ -13,6 +13,8 @@
                     <th>Ảnh sản phẩm</th>
                     <th>Tên sản phẩm</th>
                     <th>Giá sản phẩm</th>
+                    <th>Giá sale</th>
+                    <th>Đơn vị</th>
                     <th>Mô tả</th>
                     <th>Số lượng</th>
                     <th>Thao tác</th>
@@ -25,8 +27,10 @@
                     <td><img style="width: 120px;" src="{{ asset('uploads/' . $item->image) }}" alt="Avatar"></td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->price}}</td>
+                    <td>{{$item->sale}}</td>
+                    <td>{{$item->unit}}</td>
                     <td>{{$item->description}}</td>
-                    <td>{{$item->quanity}}</td>
+                    <td>{{$item->quantity}}</td>
                     <td>
                         
                         <a href="/admin/products/edit/{{$item->id}}" class="btn btn-primary">Sửa sản phẩm</a>               

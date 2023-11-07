@@ -26,6 +26,7 @@ Route::post('/login',[LoginController::class, 'store'])->name('login');
 Route::get('/detail/{id}',[HomeController::class, 'show'])->name('detail');
 Route::get('/admin/category', [ProductController::class, 'index']) ->name('admin.products');
 
+
 Route::get('admin', function () {
     return view('admin.admin_home');
 }) ->name('admin');
@@ -45,3 +46,4 @@ Route::post('/admin/category/add', [CategoryController::class, 'store']) ->name(
 Route::get('/admin/category/edit/{id}', [CategoryController::class, 'edit']) ->name('admin.category.edit');
 Route::put('/admin/category/edit/{id}', [CategoryController::class, 'update']) ->name('admin.category.update');
 Route::delete('admin/category/delete/{id}', [CategoryController::class, 'destroy']);
+

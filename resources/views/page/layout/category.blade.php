@@ -111,5 +111,5 @@
 
     <div class="shipping text-center"><!--shipping-->
         <img src="user/images/home/freeship1.jpg" width="270" height="" alt="" />
-    </div><!--/shipping-->  
+    </div><!--/shipping-->      
 </div>

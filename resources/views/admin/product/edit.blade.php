@@ -14,8 +14,15 @@
             <input type="text" class="form-control" id="name" name="price" value="{{ $product->price }}" required>
         </div>
         <div class="form-group">
+            <label for="name">Giá sale</label>
+            <input type="text" class="form-control" id="name" name="sale" value="{{ $product->sale }}" required>
+        </div>
+        <div class="form-group">
             <label for="name">Số lượng trong kho</label>
-            <input type="text" class="form-control" id="name" name="quantity" value="{{ $product->quanity }}" required>
+            <input type="text" class="form-control" id="name" name="quantity" value="{{ $product->quantity }}" required>
+        </div><div class="form-group">
+            <label for="name">Đơn vị</label>
+            <input type="text" class="form-control" id="name" name="unit" value="{{ $product->unit }}" required>
         </div>
         <div class="form-group">
             <label for="description">Mô tả sản phẩm</label>

@@ -43,7 +43,9 @@ class ProductController extends Controller
         $product = new Product();
         $product->name = $request->input('name');
         $product->price = $request->input('price');
-        $product->quanity = $request->input('quantity');
+        $product->sale = $request->input('sale');
+        $product->unit = $request->input('unit');
+        $product->quantity = $request->input('quantity');
         $product->description = $request->input('description');
         $product->image = $fileName;
 
@@ -90,7 +92,9 @@ class ProductController extends Controller
 
         $product->name = $request->input('name');
         $product->price = $request->input('price');
-        $product->quanity = $request->input('quantity');
+        $product->sale = $request->input('sale');
+        $product->unit = $request->input('unit');
+        $product->quantity = $request->input('quantity');
         $product->description = $request->input('description');
         $product->image = $fileName;    
         $product->save();
