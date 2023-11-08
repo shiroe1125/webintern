@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AuthRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
 
 class LoginController extends Controller
 {
@@ -28,17 +31,24 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        $data = [
+        $data = [   
             'email'=>$request->input('email'),
             'password'=>$request->input('password')
         ];
-
         if(Auth::attempt($data)){
-            return redirect()->intended('/');
-        }
-        else {
-            echo 1;
-        }
+            $user = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
+            if ($user->role === 1) {
+                // Xử lý cho vai trò 'admin'
+                return redirect()->intended('/admin/home');
+            } elseif ($user->role === 0) {
+                // Xử lý cho vai trò 'user'
+                return redirect()->intended('/');
+            } else {
+                // Vai trò không hợp lệ
+                return redirect()->intended('/login');
+                }
+
+         }
     }
 
     /**

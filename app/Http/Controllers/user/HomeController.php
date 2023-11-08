@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
 class HomeController extends Controller
@@ -13,9 +14,8 @@ class HomeController extends Controller
     public function index()
     {
         $product = Product::all();
-        return view('page.home', compact('product'));
-        
-    
+        $category = Category::all();
+        return view('page.home', compact('product','category'));
     }  
 
     /**
@@ -43,6 +43,11 @@ class HomeController extends Controller
         return view('page.detail', compact('detail'));
     }
 
+    public function showofcate(int $id)
+    {   
+        $listofcate = Product::find($id);
+        return view('page.detail', compact('detail'));
+    }
     /**
      * Show the form for editing the specified resource.
      */

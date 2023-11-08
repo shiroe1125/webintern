@@ -10,15 +10,15 @@
         </div>
         <div class="form-group">
             <label for="name">Giá thành</label>
-            <input type="text" class="form-control" id="name" name="price" >
+            <input type="number" class="form-control" id="name" name="price" >
         </div>
         <div class="form-group">
             <label for="name">Giá sale</label>
-            <input type="text" class="form-control" id="name" name="sale" >
+            <input type="number" class="form-control" id="name" name="sale" >
         </div>
         <div class="form-group">
             <label for="name">Số lượng trong kho</label>
-            <input type="text" class="form-control" id="name" name="quantity" required>
+            <input type="number" class="form-control" id="name" name="quantity" required>
         </div>
         <div class="form-group">
             <label for="name">Đơn vị</label>
