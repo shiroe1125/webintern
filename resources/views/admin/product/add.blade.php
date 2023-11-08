@@ -32,7 +32,9 @@
             <label for="name">Ảnh sản phẩm</label>
             <input type="file" class="form-control" id="image" name="image">
         </div>
-       
-
+       @foreach ($category as $item)
+       <input type="radio" value="{{$item->id}}" name='category'>
+       <span>{{$item->name}}</span>
+        @endforeach
         <input type="submit" class="form-control">
     </form>

@@ -27,7 +27,7 @@ Route::post('/login',[LoginController::class, 'store'])->name('login');
 
 
 Route::get('/detail/{id}',[HomeController::class, 'show'])->name('detail');
-Route::get('/listofcate/{id}',[HomeController::class, 'showofcate'])->name('listofcate');
+
 Route::get('/admin/category', [ProductController::class, 'index']) ->name('admin.products');
 
 

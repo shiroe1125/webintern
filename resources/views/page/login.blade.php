@@ -36,7 +36,7 @@
 							<input type="address" placeholder="Địa chỉ"/>
 							<input type="phonenumber" placeholder="Số điện thoại"/>
 							<input type="password" placeholder="Mật khẩu"/>
-							<button type="submit" class="btn btn-default">Sign Up</button>
+							<button type="submit" class="btn btn-default">Đăng ký</button>
 						</form>
 					</div><!--/sign up form-->
 				</div>

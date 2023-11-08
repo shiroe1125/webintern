@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 class ProductController extends Controller
 {
     /**
@@ -22,7 +23,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.product.add');
+        $category = Category::all();
+        return view('admin.product.add', compact('category'));
     }
 
     /**
@@ -40,7 +42,8 @@ class ProductController extends Controller
             $fileName = null; // Đảm bảo biến $fileName được định nghĩa dù có tải lên tệp ảnh hay không
         }
 
-        $product = new Product();
+        $product = new Product();   
+        $category = $request->input('category');
         $product->name = $request->input('name');
         $product->price = $request->input('price');
         $product->sale = $request->input('sale');
@@ -48,8 +51,8 @@ class ProductController extends Controller
         $product->quantity = $request->input('quantity');
         $product->description = $request->input('description');
         $product->image = $fileName;
-
         $product->save();
+        $product ->product()->sync($category);
 
         return redirect()->route('admin.products');
     }

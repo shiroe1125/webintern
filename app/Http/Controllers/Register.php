@@ -1,24 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Category;
 use Illuminate\Http\Request;
-use App\Models\Product;
-class HomeController extends Controller
+
+class Register extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $product = Product::all();
-        $category = Category::all();
-        return view('page.home', compact('product','category',));
-    }  
+   
+    }
 
-    /**
+    /** 
      * Show the form for creating a new resource.
      */
     public function create()
@@ -37,18 +33,11 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(int $id)
-    {   
-        $category = Category::all();
-        $detail = Product::find($id);
-        return view('page.detail', compact('detail','category'));
+    public function show(string $id)
+    {
+        //
     }
 
-    // public function showofcate(int $id)
-    // {   
-    //     $listofcate = Product::find($id);
-    //     return view('page.detail', compact('detail'));
-    // }
     /**
      * Show the form for editing the specified resource.
      */
