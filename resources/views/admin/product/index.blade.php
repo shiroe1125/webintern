@@ -11,8 +11,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Ảnh sản phẩm</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Giá sản phẩm</th>
+                    <th>Tên</th>
+                    <th>Loại </th>
+                    <th>Giá </th>
                     <th>Giá sale</th>
                     <th>Đơn vị</th>
                     <th>Mô tả</th>
@@ -26,6 +27,7 @@
                     <td>{{$item->id}}</td>
                     <td><img style="width: 120px;" src="{{ asset('uploads/' . $item->image) }}" alt="Avatar"></td>
                     <td>{{$item->name}}</td>
+                    <td>{{$item->category}}</td>
                     <td>{{$item->price}}</td>
                     <td>{{$item->sale}}</td>
                     <td>{{$item->unit}}</td>

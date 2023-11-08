@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\home;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\User\HomeController;
 use App\Models\Category;
 use App\Models\Product;
@@ -21,8 +22,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
+
 Route::get('/login',[LoginController::class, 'index']);
 Route::post('/login',[LoginController::class, 'store'])->name('login');
+
+Route::get('/register',[RegisterController::class, 'index']);
+Route::post('/register',[RegisterController::class, 'store'])->name('register');
 
 
 
