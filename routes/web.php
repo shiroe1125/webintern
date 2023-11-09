@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\CategoryProductController;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +35,8 @@ Route::post('/register',[RegisterController::class, 'store'])->name('register');
 Route::get('/detail/{id}',[HomeController::class, 'show'])->name('detail');
 
 Route::get('/admin/category', [ProductController::class, 'index']) ->name('admin.products');
+Route::get('/category/{category}', [CategoryProductController::class,'index'])->name('category.products');
+
 
 
 Route::get('admin', function () {

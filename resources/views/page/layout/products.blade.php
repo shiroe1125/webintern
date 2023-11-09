@@ -1,6 +1,6 @@
 <div class="col-sm-9 padding-right">
     <div class="features_items">
-        <h2 class="title text-center">Sản phẩm nổi bật</h2>
+        <h2 class="title text-center">Sản phẩm</h2>
         @foreach ($product as $item)
         <div class="col-sm-4">
             <div class="product-image-wrapper">

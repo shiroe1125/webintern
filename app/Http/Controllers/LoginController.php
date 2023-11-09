@@ -47,7 +47,6 @@ class LoginController extends Controller
                 // Vai trò không hợp lệ
                 return redirect()->intended('/login');
                 }
-
          }
     }
 
