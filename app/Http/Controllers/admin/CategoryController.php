@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Category_Product;
 
 class CategoryController extends Controller
 {
@@ -72,6 +73,7 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
+     
         $category = Category::find($id);
         $category->delete();
         return redirect()->route('admin.category');

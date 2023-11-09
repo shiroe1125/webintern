@@ -19,7 +19,15 @@ return new class extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->foreign('category_id')->references('id')->on('categories');
         });
+        
+        Schema::table('category_product', function (Blueprint $table) {
+            $table->foreign('product_id')
+                  ->references('id')
+                  ->on('products')
+                  ->onDelete('cascade');
+        });
     }
+    
 
     /**
      * Reverse the migrations.

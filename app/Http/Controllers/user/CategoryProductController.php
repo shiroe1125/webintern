@@ -74,6 +74,6 @@ if ($category) {
      */
     public function destroy(string $id)
     {
-        //
+      
     }
 }
