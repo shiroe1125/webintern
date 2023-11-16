@@ -5,8 +5,10 @@ use App\Http\Controllers\admin\home;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\user\CartController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\CategoryProductController;
+use App\Http\Controllers\UserController;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +32,13 @@ Route::post('/login',[LoginController::class, 'store'])->name('login');
 Route::get('/register',[RegisterController::class, 'index']);
 Route::post('/register',[RegisterController::class, 'store'])->name('register');
 
+
+Route::get('/admin/user', [UserController::class, 'index']) ->name('admin.user');
+Route::get('/admin/user/add', [UserController::class, 'create']) ->name('admin.user.create');
+Route::post('/admin/user/add', [UserController::class, 'store']) ->name('admin.user.add');
+Route::get('/admin/user/edit/{id}', [UserController::class, 'edit']) ->name('admin.user.edit');
+Route::put('/admin/user/edit/{id}', [UserController::class, 'update']) ->name('admin.user.update');
+Route::delete('admin/user/delete/{id}', [UserController::class, 'destroy']);
 
 
 Route::get('/detail/{id}',[HomeController::class, 'show'])->name('detail');
@@ -59,3 +68,4 @@ Route::get('/admin/category/edit/{id}', [CategoryController::class, 'edit']) ->n
 Route::put('/admin/category/edit/{id}', [CategoryController::class, 'update']) ->name('admin.category.update');
 Route::delete('admin/category/delete/{id}', [CategoryController::class, 'destroy']);
 
+Route::get('/cart', [CartController::class, 'index']) ->name('cart');

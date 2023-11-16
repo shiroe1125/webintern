@@ -73,7 +73,7 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-     
+        
         $category = Category::find($id);
         $category->delete();
         return redirect()->route('admin.category');

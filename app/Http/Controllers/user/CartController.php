@@ -4,30 +4,16 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Product;
-use App\Models\Category;
-use App\Models\Category_Product;
 
-
-class CategoryProductController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index($id)
+    public function index()
     {
-        $category2 = Category::all();
-        $category = Category::where('id',$id)->get() ->first();
-
-if ($category) {
-    $productsInCategory = $category->category;
-   
-} else {
-    // Xử lý khi không tìm thấy danh mục
-    echo "Không tìm thấy danh mục.";
+        return view('page.cart');
     }
-    return view('page.list_category', compact('productsInCategory','category2'));
-}
 
     /**
      * Show the form for creating a new resource.
@@ -74,6 +60,6 @@ if ($category) {
      */
     public function destroy(string $id)
     {
-        
+        //
     }
 }

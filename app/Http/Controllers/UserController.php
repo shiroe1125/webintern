@@ -2,23 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use App\Models\User;
 
-
-
-class RegisterController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('page.register');
+        $user = User::all();
+        return view('admin.user.index', compact ('user'));
     }
 
     /**
@@ -26,7 +22,7 @@ class RegisterController extends Controller
      */
     public function create()
     {
-        
+        return view('admin.user.add');
     }
 
     /**
@@ -45,31 +41,12 @@ class RegisterController extends Controller
             $user->address = $request->input('address');
             $user->phone = $request->input('phone');
             $user->password = $request->input('password');
-            $user->role = 0;
-            $user->save();
-            return redirect()->route('login')->with('success', 'Người dùng đã được thêm thành công!');
-      }
-    }
-
-
-    public function storeadmin(Request $request) 
-    {
-        $existingUser = User::where('email', $request->input('email'))->first();
-        if ($existingUser) {
-            // Email đã tồn tại, hiển thị thông báo lỗi
-            return redirect()->back()->with('error', 'Email đã tồn tại trong hệ thống.');
-        } else {
-            $user = new User();
-            $user->name = $request->input('name');
-            $user->email = $request->input('email');
-            $user->address = $request->input('address');
-            $user->phone = $request->input('phone');
-            $user->password = $request->input('password');
             $user->role = $request->input('role');
             $user->save();
-            return redirect()->route('login')->with('success', 'Người dùng đã được thêm thành công!');
+            return redirect()->route('admin.user')->with('success', 'Người dùng đã được thêm thành công!');
       }
     }
+
     /**
      * Display the specified resource.
      */
@@ -99,6 +76,8 @@ class RegisterController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('admin.user');
     }
 }

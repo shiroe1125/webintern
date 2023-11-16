@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Category_Product;
 class ProductController extends Controller
 {
     /**
@@ -23,7 +24,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $category = Category::all();
+        $category = Category::all  ();
         return view('admin.product.add', compact('category'));
     }
 
@@ -109,6 +110,7 @@ class ProductController extends Controller
      */
     public function destroy(int $id)
     {
+        
         $product = Product::find($id);
         $product->delete();
         return redirect()->route('admin.products');
