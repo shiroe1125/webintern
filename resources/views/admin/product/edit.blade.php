@@ -12,7 +12,7 @@
         <div class="form-group">
             <label for="name">Giá thành</label>
             <input type="text" class="form-control" id="name" name="price" value="{{ $product->price }}" required>
-        </div>
+        </div>  
         <div class="form-group">
             <label for="name">Giá sale</label>
             <input type="text" class="form-control" id="name" name="sale" value="{{ $product->sale }}" required>

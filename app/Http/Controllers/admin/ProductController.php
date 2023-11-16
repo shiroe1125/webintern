@@ -115,4 +115,14 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('admin.products');
     }
+
+    public function search(Request $request)
+    {
+        $category2 = Category::all();
+        $query = $request->input('query');
+        $products = Product::where('name', 'LIKE', "%$query%")->get();
+        return view('page.search', compact('products','category2'));
+        
+    }
 }
+

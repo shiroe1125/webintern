@@ -28,7 +28,7 @@
                     <td>{{$item->role}}</td>
                     <td>
                         
-                        <a href="/admin/products/edit/{{$item->id}}" class="btn btn-primary">Sửa thông tin</a>               
+                        <a href="/admin/user/edit/{{$item->id}}" class="btn btn-primary">Sửa thông tin</a>               
                         <form method="POST" action="admin/user/delete/{{$item->id}}">
                             @csrf
                             @method('DELETE')

@@ -69,3 +69,5 @@ Route::put('/admin/category/edit/{id}', [CategoryController::class, 'update']) -
 Route::delete('admin/category/delete/{id}', [CategoryController::class, 'destroy']);
 
 Route::get('/cart', [CartController::class, 'index']) ->name('cart');
+
+Route::get('/products/search',[ProductController::class, 'search'])->name('products.search');
