@@ -4,10 +4,12 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\home;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\user\CartController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\CategoryProductController;
+use App\Http\Controllers\user\CheckOutController;
 use App\Http\Controllers\UserController;
 use App\Models\Category;
 use App\Models\Product;
@@ -69,5 +71,10 @@ Route::put('/admin/category/edit/{id}', [CategoryController::class, 'update']) -
 Route::delete('admin/category/delete/{id}', [CategoryController::class, 'destroy']);
 
 Route::get('/cart', [CartController::class, 'index']) ->name('cart');
+Route::post('/add/cart', [CartController::class, 'store']) ->name('add.cart');
 
 Route::get('/products/search',[ProductController::class, 'search'])->name('products.search');
+
+Route::get('/checkout', [CheckOutController::class, 'index']) ->name('checkout');
+
+Route::post('/order', [OrderController::class, 'store']) ->name('order');

@@ -5,10 +5,11 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class CartController extends Controller
+class CheckOutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +17,7 @@ class CartController extends Controller
     public function index()
     {
         $user_id = Auth::user()->id;
+        $user = User::find($user_id);
         $cart = Cart::where('user_id',$user_id)->get();
         $sum =0;
         $sum2 =0;
@@ -23,7 +25,7 @@ class CartController extends Controller
             $sum += $item->quantity;
             $sum2 += $item->product->price * $item->quantity;
         } 
-        return view('page.cart', compact('cart','sum','sum2'));
+        return view('page.checkout', compact('cart','sum','sum2','user'));
     }
 
     /**
@@ -31,7 +33,7 @@ class CartController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -39,16 +41,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::all();
-        $product2 = $request->input('idproduct');
-        $quantity = $request->input('quantity');
-        $user_id = Auth::user()->id;
-        $cart = new Cart();
-        $cart -> user_id = $user_id;
-        $cart -> product_id = $product2;
-        $cart -> quantity = $quantity;
-        $cart -> save();
-        return redirect() -> route('home');
+        //
     }
 
     /**
@@ -72,7 +65,7 @@ class CartController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        
+        //
     }
 
     /**

@@ -57,7 +57,9 @@
 								<img src="user/images/product-details/new.jpg" class="newarrival" alt="" />
 								<h2>Tên sản phẩm: {{$detail->name}}</h2>
 								<h2>Kho còn: {{$detail->quanity}}</h2>
-								<span>
+								<form action="{{ route('add.cart') }}" method="post">
+									@csrf
+								<span>									
 									<span>Giá: {{$detail->price}}$</span>
 								</span>
 									<div style="display: flex;">
@@ -65,15 +67,17 @@
 											<h2 style="padding-top: 6px;">Số lượng mua:</h2> 
 										</div>
 										<div style="margin-left: 20px">
-											<input style="width: 60px" type="text" value="1" class="form-control" style="width: 30px; height: 30px;" />
+											<input style="width: 60px" type="text" value="1" class="form-control" style="width: 30px; height: 30px;" name ="quantity" />
 										</div>
 									</div>		
 								<p><b>Loại sản phẩm:</b> {{$detail->category}}</p>
 								<p>Mô tả sản phẩm: {{$detail->description}} </p>
-								<button type="button" class="btn btn-fefaul">
+								<input type="hidden" value="{{$detail ->id}}" name ="idproduct">		
+								<button type="submit" class="btn btn-fefaul">
 									<i class="fa fa-shopping-cart"></i>
 									Thêm vào giỏ hàng
 								</button>	
+							</form>
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
