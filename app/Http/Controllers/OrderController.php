@@ -63,8 +63,12 @@ class OrderController extends Controller
             $product->name = $item->product->name;
             $product->price = $item->product->price;
             $product->save();
-        } 
-        return 1;
+        }
+
+        foreach ($cart as $item){
+            $item->delete();
+        }
+        return redirect() -> route('home');
     }
 
     /**
