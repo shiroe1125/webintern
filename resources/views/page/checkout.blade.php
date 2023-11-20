@@ -67,8 +67,8 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="checkout-options">				
-			</div><!--/checkout-options-->
+			
+
 			<div class="shopper-informations">
                 <form action="{{route('order')}}" method="post">
                     @csrf
@@ -76,38 +76,40 @@
                         <div class="col-sm-3">
                             <div class="shopper-info">
                                 <p>Thông tin giao hàng</p>
+								<form>
                                     <input value= "{{$user->email}}" >
                                     <input type="text" name = "name" placeholder="Họ Tên">
                                     <input type="text" name="xa" placeholder="Xã">
                                     <input type="text" name = "huyen" placeholder="Huyện">
-                                    <input type="text" name = "tinh" placeholder="Thành phố">                               
+                                    <input type="text" name = "tinh" placeholder="Thành phố">   
+								</form> 								                           
                                 <button type="submit" class="btn btn-primary" href="">Thanh toán</button>
                             </div>
                         </div>
+
                         <div class="col-sm-5 clearfix">
                             <div class="bill-to">
                                 <p>Số điện thoại</p>
-                                <div class="form-one">
-                                    
+                                <div class="form-one"> 
                                 </div>
-                                <div class="form-two">
-                                    <form>									
-                                        <input value="{{$user ->phone}}">
+                                <div class="form-two">	
+									<form action="">	
+                                    <input value="{{$user ->phone}}">
                                     </form>
                                 </div>
                             </div>
                         </div>
+						
                         <div class="col-sm-4">
                             <div class="order-message">
                                 <p>Note</p>
                                 <textarea name="note"  placeholder="Ghi chú cho đơn hàng của bạn" rows="16"></textarea>
-        
                             </div>	
                         </div>					
                     </div>
             </form>
 			</div>
-	</section> <!--/#cart_items-->
+	</section> 
 
 	<!--/Footer-->
     @include('page.layout.footer')

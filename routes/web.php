@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\home;
 use App\Http\Controllers\admin\LoginAdController;
+use App\Http\Controllers\admin\OrderAdCotroller;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
@@ -74,3 +75,9 @@ Route::get('/products/search',[ProductController::class, 'search'])->name('produ
 Route::get('/checkout', [CheckOutController::class, 'index']) ->name('checkout');
 
 Route::post('/order', [OrderController::class, 'store']) ->name('order');
+
+Route::get('/admin/order', [OrderAdCotroller::class, 'index']) ->name('admin.order');
+// Route::get('/admin/order/edit/{id}', [OrderAdCotroller::class, 'edit']) ->name('admin.order.edit');
+// Route::put('/admin/order/edit/{id}', [OrderAdCotroller::class, 'update']) ->name('admin.order.update');
+Route::get('/admin/order/show/{id}', [OrderAdCotroller::class, 'show']) ->name('admin.order.show');
+Route::delete('admin/order/delete/{id}', [OrderAdCotroller::class, 'destroy']);

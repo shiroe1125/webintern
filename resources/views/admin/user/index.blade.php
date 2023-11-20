@@ -15,6 +15,7 @@
                     <th>Địa chỉ </th>
                     <th>Số điện thoại </th>
                     <th>Role</th>
+                    <th>Thao tác</th>
                 </tr>
             </thead>
             <tbody>
