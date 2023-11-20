@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\home;
+use App\Http\Controllers\admin\LoginAdController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
@@ -15,25 +16,20 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::get('/login',[LoginController::class, 'index']);
 Route::post('/login',[LoginController::class, 'store'])->name('login');
 
+
+Route::get('/loginad',[LoginAdController::class, 'index']);
+Route::post('/loginad',[LoginAdController::class, 'store'])->name('loginad');
+
+
+
 Route::get('/register',[RegisterController::class, 'index']);
 Route::post('/register',[RegisterController::class, 'store'])->name('register');
-
 
 Route::get('/admin/user', [UserController::class, 'index']) ->name('admin.user');
 Route::get('/admin/user/add', [UserController::class, 'create']) ->name('admin.user.create');

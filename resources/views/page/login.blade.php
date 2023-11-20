@@ -24,6 +24,7 @@
 						</form>
 					</div><!--/login form-->
 				</div>
+				
 				<div class="col-sm-4"><!-- Image -->
                     <img src="user/images/home/logocam.png" width="400" height="400" /> 
 	</section><!--/form-->
