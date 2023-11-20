@@ -33,9 +33,6 @@
                         <a href="index.html"><img src="user/images/home/logocam.png" height="80" width="80" /></a>
                     </div>
                             <div class="btn-group pull-right">
-                        
-                        
-                        
                     </div>
                 </div>
                 <div class="col-sm-8">
@@ -73,13 +70,9 @@
                                     <li><a href="shop.html">Sản phẩm</a></li>
                                     <li><a href="checkout.html">Checkout</a></li> 
                                     <li><a href="cart.html">Giỏ hàng</a></li> 
-                                    <li><a href="{{ route('login') }}">Đăng nhập</a></li> 
                                 </ul>
                             </li> 
 
-                            
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="contact-us.html">Liên hệ</a></li>
                         </ul>
                     </div>
                 </div>

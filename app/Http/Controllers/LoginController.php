@@ -37,17 +37,15 @@ class LoginController extends Controller
         ];
         if(Auth::attempt($data)){
             $user = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
-            if ($user->role === 1) {
-                // Xử lý cho vai trò 'admin'
-                return redirect()->intended('/admin/home');
-            } elseif ($user->role === 0) {
+            if ($user->role === 0) {
                 // Xử lý cho vai trò 'user'
                 return redirect()->intended('/');
             } else {
                 // Vai trò không hợp lệ
+                Auth::logout(); // Đăng xuất nếu vai trò không phải là 'user'
                 return redirect()->intended('/login');
-                }
-         }
+            }
+        }
     }
 
     /**

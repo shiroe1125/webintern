@@ -8,7 +8,6 @@
     @include('page.layout.header')
 	
 	<!--/slider-->
-	@include('page.layout.slider')
     <section>
         <div class="container">
             <div class="row">

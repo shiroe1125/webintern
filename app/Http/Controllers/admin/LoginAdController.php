@@ -29,9 +29,26 @@ class LoginAdController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        
+{
+    $data = [   
+        'email' => $request->input('email'),
+        'password' => $request->input('password')
+    ];
+
+    if (Auth::attempt($data)) {
+        $user = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
+
+        if ($user->role === 1) {
+            // Xử lý cho vai trò 'admin'
+            return redirect()->intended('/admin/home');
+        } else {
+            // Vai trò không hợp lệ
+            Auth::logout(); // Đăng xuất nếu vai trò không phải là 'admin'
+            return redirect()->intended('/loginad');
+        }
     }
+}
+
 
     /**
      * Display the specified resource.
