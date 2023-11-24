@@ -44,7 +44,7 @@ class LoginController extends Controller
                 // Vai trò không hợp lệ
                 Auth::logout(); // Đăng xuất nếu vai trò không phải là 'user'
                 return redirect()->intended('/login');
-            }
+            }   
         }
     }
 
@@ -78,5 +78,10 @@ class LoginController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    public function logout()
+    {
+    Auth::logout(); // Đăng xuất người dùng
+    return redirect('/')->with('success', 'Đăng xuất thành công!');
     }
 }

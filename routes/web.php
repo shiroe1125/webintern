@@ -8,6 +8,8 @@ use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\user\Account;
+use App\Http\Controllers\user\AccountController;
 use App\Http\Controllers\user\CartController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\CategoryProductController;
@@ -22,6 +24,7 @@ Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::get('/login',[LoginController::class, 'index']);
 Route::post('/login',[LoginController::class, 'store'])->name('login');
+Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
 
 
 Route::get('/loginad',[LoginAdController::class, 'index']);
@@ -81,3 +84,6 @@ Route::get('/admin/order', [OrderAdCotroller::class, 'index']) ->name('admin.ord
 // Route::put('/admin/order/edit/{id}', [OrderAdCotroller::class, 'update']) ->name('admin.order.update');
 Route::get('/admin/order/show/{id}', [OrderAdCotroller::class, 'show']) ->name('admin.order.show');
 Route::delete('admin/order/delete/{id}', [OrderAdCotroller::class, 'destroy']);
+
+Route::get('/account', [AccountController::class, 'index']) ->name('account');
+
