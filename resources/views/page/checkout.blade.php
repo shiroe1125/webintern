@@ -73,37 +73,53 @@
                 <form action="{{route('order')}}" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <div class="shopper-info">
                                 <p>Thông tin giao hàng</p>
-								<form>
-                                    <input value= "{{$user->email}}" >
-                                    <input type="text" name = "name" placeholder="Họ Tên">
-                                    <input type="text" name="xa" placeholder="Xã">
-                                    <input type="text" name = "huyen" placeholder="Huyện">
-                                    <input type="text" name = "tinh" placeholder="Thành phố">   
-								</form> 								                           
+								<div class="form-group">
+									{{-- <label for="name">Tên danh mục</label> --}}
+									<input type="text" class="form-control" value= "{{$user->email}}"  required>
+								</div>
+								<div class="form-group">
+									{{-- <label for="name">Tên danh mục</label> --}}
+									<input type="text" class="form-control" name = "name" placeholder="Họ Tên"  required>
+								</div>
+								<div class="form-group">
+									{{-- <label for="name">Tên danh mục</label> --}}
+									<input type="text" class="form-control" name="xa" placeholder="Xã" required>
+								</div>
+								<div class="form-group">
+									{{-- <label for="name">Tên danh mục</label> --}}
+									<input type="text" class="form-control" name = "huyen" placeholder="Huyện"  required>
+								</div>
+								<div class="form-group">
+									{{-- <label for="name">Tên danh mục</label> --}}
+									<input type="text" class="form-control" name = "tinh" placeholder="Thành phố"  required>
+								</div>								                           
                                 <button type="submit" class="btn btn-primary" href="">Thanh toán</button>
                             </div>
                         </div>
 
-                        <div class="col-sm-5 clearfix">
+                        <div class="col-sm-4 clearfix">
                             <div class="bill-to">
                                 <p>Số điện thoại</p>
-                                <div class="form-one"> 
-                                </div>
-                                <div class="form-two">	
-									<form action="">	
-                                    <input value="{{$user ->phone}}">
-                                    </form>
-                                </div>
+                                <div class="form-group">
+									{{-- <label for="name">Tên danh mục</label> --}}
+									<input type="text" class="form-control" value="{{$user ->phone}}"  required>
+								</div>
+                                
                             </div>
                         </div>
 						
                         <div class="col-sm-4">
+							
                             <div class="order-message">
                                 <p>Note</p>
-                                <textarea name="note"  placeholder="Ghi chú cho đơn hàng của bạn" rows="16"></textarea>
+								<div class="form-group">
+									{{-- <label for="name">Tên danh mục</label> --}}
+									<textarea type="text" class="form-control" name="note" placeholder="Ghi chú cho đơn hàng của bạn"></textarea>
+								</div>
+                                
                             </div>	
                         </div>					
                     </div>

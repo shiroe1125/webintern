@@ -38,10 +38,12 @@ class OrderAdCotroller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(int $id)
     {
         $items = Order::find($id);
+        
         $product = Product_Order::where('order_id', '=', "$id")->get();
+        // dd($id, $product);
         $template = "admin.order.order_detail";
         return view('admin.admin_home', compact('items','template','product'));
 

@@ -6,6 +6,7 @@ use App\Http\Requests\AuthRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use function Laravel\Prompts\info;
 
 
 class LoginController extends Controller
@@ -31,6 +32,7 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
+       
         $data = [   
             'email'=>$request->input('email'),
             'password'=>$request->input('password')
@@ -38,11 +40,14 @@ class LoginController extends Controller
         if(Auth::attempt($data)){
             $user = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
             if ($user->role === 0) {
+               
                 // Xử lý cho vai trò 'user'
+                info('Package installed successfully.');
                 return redirect()->intended('/');
             } else {
                 // Vai trò không hợp lệ
                 Auth::logout(); // Đăng xuất nếu vai trò không phải là 'user'
+                info('Package installed successfully.');
                 return redirect()->intended('/login');
             }   
         }

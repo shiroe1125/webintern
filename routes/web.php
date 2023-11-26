@@ -14,6 +14,7 @@ use App\Http\Controllers\user\CartController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\CategoryProductController;
 use App\Http\Controllers\user\CheckOutController;
+use App\Http\Controllers\user\MyOrderController;
 use App\Http\Controllers\UserController;
 use App\Models\Category;
 use App\Models\Product;
@@ -87,3 +88,4 @@ Route::delete('admin/order/delete/{id}', [OrderAdCotroller::class, 'destroy']);
 
 Route::get('/account', [AccountController::class, 'index']) ->name('account');
 
+Route::get('/myorder', [MyOrderController::class, 'index']) ->name('myorder');

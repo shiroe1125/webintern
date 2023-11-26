@@ -62,6 +62,7 @@ class OrderController extends Controller
             $product->product_id = $item->product->id;
             $product->name = $item->product->name;
             $product->price = $item->product->price;
+            $product->quantity = $item->quantity;
             $product->save();
         }
 

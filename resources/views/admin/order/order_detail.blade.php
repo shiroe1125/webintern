@@ -18,7 +18,7 @@
 
                                     <tr >
                                         <td>
-                                            <img src="{{ asset('uploads/' . $item->image) }}" style="width: 60px; height: auto;" alt="zzz">
+                                            <img src="{{ asset('uploads/' . $item->product->image) }}" style="width: 60px; height: auto;" alt="zzz">
                                         </td>
                                         <td>
                                            {{$item->name}}
@@ -39,9 +39,28 @@
                             </table>
                         </div>
                         <div class="d-flex flex-column float-right">
-                            <div class="float-right text-lg-right">
-                                <h6><b>Tổng cộng:</b> {{$items->total_price}} VND</h6>
+                            <div class="float-left text-lg-right">
+                                <h6>Giá: {{$items->total_price}} VND</h6>
                             </div>
+                            <div class="float-right text-lg-right">
+                                <h6>Vận chuyển:  0 VND</h6>
+                            </div>
+                            <div class="float-right text-lg-right">
+                                <h6><b>Tổng cộng: </b> {{$items->total_price}} VND</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-lg-12">
+                        <hr>
+                        <div>
+                           
+                        </div>
+                        <div class="d-flex flex-column float-right">
+                            <div class="float-right text-lg-right">
+                                <h6>Khách hàng thanh toán: {{$items->total_price}} VND</h6>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
