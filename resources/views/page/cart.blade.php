@@ -40,10 +40,8 @@
 										<p>{{$item->product->price}}</p>
 									</td>
 									<td class="cart_quantity">
-										<div class="cart_quantity_button">
-											<a class="cart_quantity_up" href=""> + </a>
-											<input class="cart_quantity_input" type="text" name="quantity" value="{{$item ->quantity}}" autocomplete="off" size="2">
-											<a class="cart_quantity_down" href=""> - </a>
+										<input class="cart_quantity_input" type="text" name="quantity" value="{{$item ->quantity}}" autocomplete="off" size="2">
+
 										</div>
 									</td>
 									<td class="cart_total">
@@ -72,7 +70,7 @@
 							<li>Số lượng sản phẩm <span>{{$sum}}</span></li>
 							<li>Total <span>{{$sum2}}</span></li>
 						</ul>
-							<a class="btn btn-default update" href="">Update</a>
+							{{-- <a class="btn btn-default update" href="">Update</a> --}}
 							<a class="btn btn-default check_out" href="{{ route('checkout') }}">Check Out</a>
 					</div>
 				</div>

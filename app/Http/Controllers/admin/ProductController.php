@@ -110,7 +110,12 @@ class ProductController extends Controller
      */
     public function destroy(int $id)
     {
+        $product_category = Category_Product::where('product_id', $id)->first();
         
+        if ($product_category) {
+            $product_category->delete();
+        }
+
         $product = Product::find($id);
         $product->delete();
         return redirect()->route('admin.products');
